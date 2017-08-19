@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <h1>BMI Calculator</h1>
+
+    <label>Weight</label>
+    <input type="number" id="weightId" name="weight">
+
+    <label>Height</label>
+    <input type="number" id="heightId" name="heiht">
+
+    <form action="">
+      <input type="radio" id="radio_m" name="heightType" value="m" checked="checked"> m<br>
+      <input type="radio" id="radio_cm" name="heightType" value="cm"> cm<br>
+    </form>
+
+    <button type="submit" id="calculateBtn">Calculate BMI</button>
+
+    <output id="resultId"></output>
+    <output id="msgId"></output>
+  </body>
+</html>
