@@ -7,26 +7,51 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <script src="script.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css"></link>
 </head>
 
 <body>
-  <h1>BMI Calculator</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
 
-  <label>Weight</label>
-  <input type="number" id="weightId" name="weight" pattern="+?[0-9]*\.?[0-9]+.">
+        <div class="jumbotron">
+          <h1>BMI Calculator</h1>
+          <h5> BMW (Body mass index) is a useful measurement for most people over 18 years old.</h5>
+          <h5>It is a measure of body fat based on height and weight.</h5>
+          <h5>This calculator shouldn’t be used for pregnant women or children.</h5>
+        </div>
 
-  <label>Height</label>
-  <input type="number" id="heightId" name="heiht" pattern="+?[0-9]*\.?[0-9]+.">
+        <div class="well">
+          <div class="form-group">
+            <label for="weightId">Weight</label>
+            <input class="form-control" type="number" id="weightId" name="weight" 
+              pattern="+?[0-9]*\.?[0-9]+." placeholder="Weight in kg"/>
+          </div>
 
-  <form action="">
-    <input type="radio" id="radio_m" name="heightType" value="m" checked="checked"> m<br>
-    <input type="radio" id="radio_cm" name="heightType" value="cm"> cm<br>
-  </form>
+          <div class="form-group">
+            <label for="heightId">Height</label>
+            <input class="form-control" type="number" id="heightId" name="heiht" pattern="+?[0-9]*\.?[0-9]+." 
+              placeholder="Select the unit below"/>
 
-  <button type="submit" id="calculateBtn">Calculate BMI</button>
+            <label class="radio-inline"><input type="radio" id="radio_m" name="heightType" value="m" checked="checked">m</label>
+            <label class="radio-inline"><input type="radio" id="radio_cm" name="heightType" value="cm">cm</label>
+          </div>
 
-  <output id="resultId"></output>
-  <output id="msgId"></output>
+          <div id="alertError" hidden="true"></div>
+
+          <button type="submit" id="calculateBtn" class="btn btn-primary btn-block">Calculate BMI</button>
+
+        </div>
+
+
+        <div id="alertResult" hidden="true"></div>
+        <div id="alertBMIInfo" hidden="true"></div>
+
+      </div>
+    </div>
+
+  </div>
 </body>
 
 </html>
